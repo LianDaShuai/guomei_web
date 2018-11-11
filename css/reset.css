@@ -1,0 +1,32 @@
+body,html,div,p,h1,h2,h3,h4,h5,h6,ul,li,ol,dl,dt,dd,section,fieldset,legend,table,form,input{
+	margin:0;
+	padding:0;
+}
+.same{
+    margin: 0 auto;
+    width: 1200px;
+}
+.center{
+    margin:0 auto;
+    width: 990px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    display: block;
+    border: 0;
+}
+.lazy{
+    background: url(../img/loading-sm.png) 50% 50% no-repeat;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size: 14px;
+    font-weight: normal;
+}
+var,i,em,b.strong{
+    font-style:normal;
+}
