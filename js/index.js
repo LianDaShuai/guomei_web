@@ -215,6 +215,36 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
             })
         }
     });
+
+    // 购物车
+    $(".gouwu_car").click(function(e){
+        e = e || event;
+        e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
+        if($(".cart_list").css("right") == "35px"){
+            $(".cart_list").stop().animate({
+                right:-250
+            })
+        }else{
+            $(".cart_list").stop().animate({
+                right:35
+            })
+        }
+    });
+    $(".cart_li>h1>span").on("click",function(){
+        $(".cart_list").stop().animate({
+            right:-250
+        })
+    })
+    // 点击document购物车消失
+    $(document).on("click",function(){
+        $(".cart_list").stop().animate({
+            right:-250
+        })
+    })
+    $(".cart_list").on("click",function(e){
+        e = e || event;
+        e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
+    })
 });
 
 

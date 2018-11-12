@@ -1906,6 +1906,7 @@
     border-top: none;
     height: 29px;
     text-align: center;
+    background: #fff;
 }
 .left_floor>p a{
     display: inline-block;
@@ -2209,4 +2210,190 @@
     width: 20px;
     height: 16px;
     margin-top: 3px;
+}
+/* 购物车列表 */
+.cart_list{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 240px;
+    height: 100%;
+    background: #f8f8f8;
+    z-index: 999;
+}
+.cart_list.active{
+    right: 35;
+}
+.cart_li{
+    position: absolute;
+    width: 239px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    border-left: 1px solid #e6e6e6;
+    background: #fff;
+    overflow: hidden;
+}
+.cart_li h1{
+    height: 30px;
+    position: relative;
+}
+.cart_li h1 span{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 0;
+    background: url(../img/ui.png) -20px -553px;
+    cursor: pointer;
+    margin-left: 26px;
+}
+.cart_content1 h2{
+    color: #888;
+    font-weight: 700;
+    padding: 0 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #E6E6E6;
+    z-index: 1;
+}
+.cart_content1>ul{
+    height: 503px;
+    position: relative;
+}
+.cart_content1>ul li{
+    padding: 10px 5px 8px;
+    cursor: pointer;
+    position: relative;
+}
+.cart_content1>ul li::after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
+.cart_content1>ul li:hover{
+    background: #EFEDED;
+}
+.cart_content1>ul li:hover p{
+    color: #f5004b;
+}
+.samll_img{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px 0 5px;
+    float: left;
+}
+.samll_img img{
+    width: 50px;
+    height: 50px;
+}
+.cart_content1>ul li>p{
+    width: 140px;
+    height: 38px;
+    overflow: hidden;
+    line-height: 18px;
+    position: relative;
+    top: -4px;
+    float: left;
+    color: #5e5e5e;
+    font-size: 12px;
+}
+.samll_price{
+    position: absolute;
+    top: 44px;
+    left: 70px;
+    width: 160px;
+}
+.samll_price span:nth-child(1){
+    color: #ff0027;
+    font-size: 12px;
+    float: left;
+}
+.samll_price span:nth-child(2){
+    display: block;
+    line-height: 12px;
+    padding: 0 15px;
+    position: relative;
+    width: 28px;
+    float: left;
+    margin-left: 5px;
+}
+.samll_price span:nth-child(2) a{
+    border: 1px solid #ccc;
+    text-decoration: none;
+    /* width: 20px; */
+    text-align: center;
+    display: block;
+    width: 15px;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    height: 16px;
+    font-weight: 700;
+    background: #fff;
+    line-height: 16px;
+}
+.samll_price span:nth-child(2) a:nth-child(1){
+    left: 0;
+}
+.samll_price span:nth-child(2) a:nth-child(3){
+    right: 0;
+}
+.cart_input{
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+}
+.cart_input input{
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    font-size: 100%;
+    border: 0;
+    font-size: 12px;
+    outline: none;
+}
+.samll_price>a{
+    float: right;
+    margin-right: 7px;
+    color: #A5A5A5;
+    font-size: 12px;
+}
+.all_price{
+    background: #f3f3f3;
+    padding: 10px 15px;
+    text-align: center;
+    height: 52px;
+    font-size: 12px;
+}
+.all_price h3{
+    color: #5E5E5E;
+    padding-bottom: 8px;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 12px;
+}
+.all_price>a{
+    display: inline-block;
+    background-color: #dd00a7;
+    height: 30px;
+    line-height: 30px;
+    color: #FFF;
+    padding: 0 10px;
+    font-weight: 700;
+    width: 180px;
+    text-align: center;
 }
