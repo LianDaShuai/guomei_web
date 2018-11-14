@@ -26,10 +26,10 @@
 }
 .title1{
     width: 40px;
+    overflow: hidden;
     text-align: center;
 }
-.title1 label{
-    display: block;
+.title1 p{ 
     width: 12px;
     height: 12px;
     border: 1px solid #CCC;
@@ -38,7 +38,7 @@
     border-radius: 2px;
     margin-top: 15px;
 }
-.title1 label.active{
+.title1 p.active{
     display: block;
     width: 14px;
     height: 14px;
@@ -315,7 +315,7 @@
 }
 .footer_ipt{
     float: left;
-    padding-top: 20px;
+    padding-top: 8px;
 }
 .footer_ipt .title1 label{
     margin-top: 4px;
@@ -496,6 +496,7 @@
     width: 150px;
     float: left;
     margin: 0 15px;
+    cursor: pointer;
 }
 .content_list ul li p{
     width: 100px;
@@ -533,6 +534,7 @@
     padding: 0 13px;
     margin-left: 25px;
     font-size: 12px;
+    cursor: pointer;
 }
 .foot_cart{
     background: #f7f7f7;

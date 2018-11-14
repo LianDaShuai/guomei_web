@@ -1,0 +1,159 @@
+.head{
+    height: 120px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.logo{
+    margin: 18px 40px 0 0;
+}
+.logo a{
+    display: inline-block;
+    background: url(https://misc.gomein.net.cn/images/regfront/register/registerlogo.png) no-repeat;
+    width: 300px;
+    height: 62px;
+    margin-top: 16px;
+}
+.register_1{
+    border: 1px solid #E6E6E6;
+    padding-bottom: 21px;
+    margin-top: 68px;
+    position: relative;
+    background:url(https://gfs11.gomein.net.cn/T1E1VjB7YT1RCvBVdK.png) no-repeat scroll 580px -60px;
+}
+.register_1 p{
+    position: absolute;
+    top: -25px;
+    right: 20px;
+    font-size: 12px;
+}
+.register_1 p a{
+    color: #006699;
+    margin-left: 5px;
+}
+.register_1 h1{
+    position: absolute;
+    top: -42px;
+    left: 149px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    font: bold 14px/41px "Microsoft YaHei";
+    margin-left: 2px;
+    color: #5e5e5e;
+    background: #F3F3F3;
+    border: 1px solid #e6e6e6;
+    border-bottom: 0 none;
+    cursor: pointer;
+}
+.register_2{
+    padding-top: 40px;
+}
+.yonghuming{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.go{
+    width: 151px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: right;
+    color: #888888;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.text{
+    width: 288px;
+    height: 36px;
+    padding: 0 4px;
+    border: 1px solid #ccc;
+    font: normal 14px/36px Arial,"Simsun";
+    color: #5e5e5e;
+    vertical-align: middle;
+    position: relative;
+    float: left;
+    outline: none;
+}
+.tishi1{
+    background-color: #ffffff;
+    padding: 9px 5px 9px 5px;
+    line-height: 18px;
+    float: left;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-left:3px;
+    display: none;
+}
+.tishi1.active{
+    display: block;
+}
+.tishi2{
+    background-color: #ffffff;
+    padding: 9px 5px 9px 5px;
+    line-height: 18px;
+    color: #FF5757;
+    float: left;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-left:3px;
+    display: none;
+}
+.tishi2.active{
+    display: block;
+}
+.password{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.sub_password{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.number{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.yanzheng{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.tuijianma{
+    padding: 0 0 26px 151px;
+    height: 40px;
+    position: relative;
+}
+.tijiao{
+    padding: 15px 0;
+    margin-top: -15px;
+}
+.tijiao input{
+    background-color: #ff5757;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font: 16px/40px "Microsoft YaHei";
+    height: 40px;
+    text-align: center;
+    width: 298px;
+    margin-top: 5px;
+    margin-left: 151px;
+    outline: none;
+}
+.duigou{
+    /* display: block; */
+    width: 17px;
+    height: 17px;
+    background: url(https://misc.gomein.net.cn/images/regfront/register/register.png) no-repeat 0 -20px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 425px;
+    display: none;
+}

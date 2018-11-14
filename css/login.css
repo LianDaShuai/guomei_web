@@ -189,7 +189,7 @@
 .login_box p:nth-child(3){
     margin-top:5px;
 }
-.login_box b{
+.login_box>a{
     float: right;
     width: 50px;
     height: 18px;

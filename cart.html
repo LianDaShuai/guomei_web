@@ -18,9 +18,7 @@
     <div class="cart_list center">
         <div class="list_title center">
             <div class="title1">
-                <label for="quan" id="all">
-                    <input type="checkbox"  style="display:none;" id="quan">
-                </label>
+                <p class="all"></p>
             </div>
             <div class="title2">全选</div>
             <div class="title3">商品信息</div>
@@ -36,9 +34,7 @@
         <div class="cart_shop">
             <div class="cart_shop_title">
                 <div class="title1">
-                    <label for="dan">
-                        <input type="checkbox" style="display:none" id="dan" name="duoxuan">
-                    </label>
+                    <p></p>
                 </div>
                 <div class="cart_1">
                     <span>国美自营</span>
@@ -52,9 +48,7 @@
         <div class="cart_goods">
             <div class="cart_good1">
                 <div class="title1">
-                    <label for="dan">
-                        <input type="checkbox" style="display:none" id="dan" name="duoxuan">
-                    </label>
+                    <p class="danxuan"></p>
                 </div>
                 <div class="cart_image">
                     <a href="javascript:;">
@@ -79,11 +73,11 @@
                 </div>
                 <div class="cart_good5">
                     <div class="cart_good5_j">
-                        <a href="javascript:;">-</a>
+                        <a href="javascript:;" class="jian">-</a>
                         <div class="cart_good5_ipt">
                             <input type="text" value="1">
                         </div>
-                        <a href="javascript:;">+</a>
+                        <a href="javascript:;" class="jia">+</a>
                     </div>
                 </div>
                 <div class="cart_good6">
@@ -96,9 +90,7 @@
             </div>
             <div class="cart_good1">
                 <div class="title1">
-                    <label for="dan">
-                        <input type="checkbox" style="display:none" id="dan"  name="duoxuan">
-                    </label>
+                    <p class="danxuan"></p>
                 </div>
                 <div class="cart_image">
                     <a href="javascript:;">
@@ -123,11 +115,11 @@
                 </div>
                 <div class="cart_good5">
                     <div class="cart_good5_j">
-                        <a href="javascript:;">-</a>
+                        <a href="javascript:;" class="jian">-</a>
                         <div class="cart_good5_ipt">
                             <input type="text" value="1">
                         </div>
-                        <a href="javascript:;">+</a>
+                        <a href="javascript:;" class="jia">+</a>
                     </div>
                 </div>
                 <div class="cart_good6">
@@ -144,9 +136,7 @@
         <div class="cart_footer center">
             <div class="footer_ipt">
                 <div class="title1">
-                    <label for="quan">
-                        <input type="checkbox" style="display:none" id="quan" name="duoxuan">
-                    </p>
+                    <p class="all"></p>
                 </div>
             </div>
             <div class="footer_1">
@@ -196,7 +186,9 @@
                         <div class="content_prev"></div>
                         <div class="content_next"></div>
                         <div class="content_list">
-                            <ul></ul>
+                            <ul>
+                               
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -353,6 +345,7 @@
             </div>
         </div>
     </div>
+    <script src="js/plugins/cookie.js"></script>
     <script src="js/libs/require.min.js" defer="defer" async=true data-main="js/cart.js"></script>
 </body>
 </html>

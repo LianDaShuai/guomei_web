@@ -77,7 +77,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
             clickable :true,
         }
     });
-    $(".swiper-pagination-bullet").hover(function() {
+    $("#swiper3 .swiper-pagination-bullet").hover(function() {
         $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
     },function() {
         swiper3.autoplay.start(); //鼠标移出之后，自动轮播开启
@@ -105,7 +105,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
             clickable :true,
         }
     });
-    $(".swiper-pagination-bullet").hover(function() {
+    $("#swiper4 .swiper-pagination-bullet").hover(function() {
         $(this).click(); //鼠标划上去之后，自动触发点击事件来模仿鼠标划上去的事件
     },function() {
         swiper4.autoplay.start(); //鼠标移出之后，自动轮播开启
@@ -244,6 +244,23 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
     $(".cart_list").on("click",function(e){
         e = e || event;
         e.stopPropagation?e.stopPropagation():e.cancelBubble = true;
+    })
+    //美日必抢数据请求
+    var shop = document.querySelector(".shop_bottom_block");
+    $.ajax({
+        method:"get",
+        url:"data/meiribiqiang.json",
+        success:function(data){
+            console.log(data)
+            data.forEach(function(ele,index){
+                var dl = document.createElement("dl");
+                dl.innerHTML += '<dt><img src="'+ele.goods_img+'_120.jpg"></dt>'
+                dl.innerHTML += '<dd>'+ele.goods_tg_price+'<span>'+ele.goods_price+'</span></dd>'
+                dl.innerHTML += '<dd>'+ele.goods_name+'</dd>'
+                shop.appendChild(dl)
+            })
+
+        }
     })
 });
 

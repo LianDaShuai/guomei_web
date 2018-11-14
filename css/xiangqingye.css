@@ -515,7 +515,7 @@
     color: #5e5e5e;
     background: #f8f8f8;
 }
-.jiaru>a{
+.go_shopping>a{
     display: block;
     float: left;
     border: none;
@@ -525,6 +525,7 @@
     margin-right: 8px;
     color: #fff;
     font-size: 18px;
+    cursor: pointer;
 }
 .jiaru>i{
     padding: 11px 0;

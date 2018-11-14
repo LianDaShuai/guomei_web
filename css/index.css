@@ -571,6 +571,14 @@
     border: 1px solid #e6e6e6;
     overflow: hidden;
 }
+.shop_bottom_block::after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
+}
 .shop_bottom_block dl{
     float: left;
     height: 179px;
@@ -583,6 +591,10 @@
 }
 .shop_bottom_block dl dt{
     margin-left:58px;
+}
+.shop_bottom_block dl dt img{
+    width: 120px;
+    height: 120px;
 }
 .shop_bottom_block dl dd:nth-child(2){
     font-size: 20px;

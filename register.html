@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/huadong.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <div class="head center">
+        <div class="logo">
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <div class="content center">
+        <div class="register_1">
+            <p>我已注册，现在就
+                <a href="login.html">登录</a>
+            </p>
+            <h1>个人用户注册</h1>
+            <div class="register_2">
+                <form action="">
+                    <div class="yonghuming">
+                        <span class="go">用户名：</span>
+                        <input type="text" class="text">
+                        <div class="tishi">
+                            <div class="tishi1">4-20个字符，支持汉字、字母、数字及“-”、“_”组合</div>
+                            <div class="tishi2">请输入用户名</div>
+                        </div>
+                        <i class="duigou"></i>
+                    </div>
+                    <div class="password">
+                        <span class="go">设置密码：</span>
+                        <input type="password" class="text">
+                        <div class="mima">
+                            <div class="tishi1">6-20个字符，建议由字母，数字与符号两种以上组成</div>
+                            <div class="tishi2">请输入密码</div>
+                        </div>
+                        <i class="duigou"></i>
+                    </div>
+                    <div class="sub_password">
+                        <span class="go">确认密码：</span>
+                        <input type="password" disabled="disabled" class="text">
+                        <div class="queren">
+                            <div class="tishi1">请再次输入密码</div>
+                            <div class="tishi2">两次密码不一致</div>
+                        </div>
+                        <i class="duigou"></i>
+                    </div>
+                    <div class="number">
+                        <span class="go">手机号码：</span>
+                        <input type="text" class="text" id="phone1">
+                        <div class="tishi2">手机号不能为空</div>
+                        <i class="duigou"></i>
+                    </div>
+                    <div class="yanzheng">
+                        <span class="go">滑动验证：</span>
+                        <div class="outer">
+                            <div class="filter-box"></div>
+                            <span>
+                                请按住滑块，拖到最右边
+                            </span>
+                            <div class="inner">&gt;&gt;</div>
+                        </div>
+                    </div>
+                    <div class="tuijianma">
+                        <span class="go">推荐码(选填)：</span>
+                        <input type="text" placeholder="填写推荐人 推荐码 帮好友赚收入" class="text">
+                    </div>
+                    <div class="tijiao">
+                        <input type="submit" value="立即注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/libs/require.min.js" defer="defer" async=true data-main="js/register.js"></script>
+    <script src="js/libs/jquery.min.js"></script>
+    <script src="js/plugins/bootstrap_3.3.7_js_bootstrap.min.js"></script>
+</body>
+</html>
