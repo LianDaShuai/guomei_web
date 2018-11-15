@@ -100,6 +100,17 @@
     margin-left:3px;
     display: none;
 }
+.tishi3{
+    background-color: #ffffff;
+    padding: 9px 5px 9px 5px;
+    line-height: 18px;
+    color: #FF5757;
+    float: left;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-left:3px;
+    display: none;
+}
 .tishi2.active{
     display: block;
 }

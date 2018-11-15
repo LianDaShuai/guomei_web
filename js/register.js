@@ -58,14 +58,6 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
         })
     });
 //    表单验证
-
-    $(".yonghuming input").focus(function(){
-        $(".tishi .tishi1").addClass("active")
-        $(".tishi .tishi2").removeClass("active")
-    });
-    $(".yonghuming input").blur(function(){
-        $(".tishi .tishi2").addClass("active")
-        $(".tishi .tishi1").removeClass("active")
-    })
-
+   
+  
 })

@@ -1,3 +1,12 @@
+.gome_top_order li .web_nav{
+    width: 988px;
+}
+.gome_top_order li .web_nav dl{
+    padding:0 0 0 15px;
+    margin: 0;
+}
+
+
 .gome_head{
     overflow: hidden;
     height: 120px;
@@ -162,6 +171,11 @@
     height: 80px;
     display: block;
     float: left;
+    overflow: hidden;
+}
+.cart_image a img{
+    width: 80px;
+    height: 80px;
 }
 .cart_good2{
     width: 208px;
@@ -172,6 +186,8 @@
     display: block;
     line-height: 19px;
     font-size: 11px;
+    height: 40px;
+    overflow: hidden;
     color: #333;
 }
 .cart_good2 a:hover{
@@ -463,7 +479,7 @@
     padding: 0 22px;
     height: 202px;
 }
-.content_prev,.content_next{
+.swiper-button-prev,.swiper-button-next{
     position: absolute;
     top: 50%;
     margin-top: -10px;
@@ -472,13 +488,13 @@
     height: 18px;
     overflow: hidden;
 }
-.content_prev{
+.swiper-button-prev{
     background: url(../img/sprite.png) -487px 0;
     left: 0;
 }
-.content_next{
+.swiper-button-next{
     background: url(../img/sprite.png) -392px -44px;
-    right: 0;
+    left: 891px;
 }
 .content_list{
     margin-top: 5px;
@@ -491,6 +507,10 @@
     width: 10000px;
     top: 0px;
     left: 0px;
+}
+.swiper-container{
+    width: 1800px;
+    height: 202px;
 }
 .content_list ul li{
     width: 150px;

@@ -67,11 +67,13 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
 //    二维码和手机登陆切换
    $(".login_wrap").tab1("active")
 //    点击自动登录出现安全提示
-   $(".rl").click(function(){
-       if($(".tishi").hasClass("active")){
-           $(".tishi").addClass("active")
-       }else{
-           $(".tishi").removeClass("active")
-       }
-   })
+    $(":checkbox").on("change",function(){
+        if($(this).prop("checked")){
+            $(".tishi").addClass("active")
+        }else{
+            $(".tishi").removeClass("active")
+        }
+    });
+    // 载入尾部
+    $(".foot").load("footer.html");
 })

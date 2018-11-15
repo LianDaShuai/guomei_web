@@ -261,7 +261,85 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
             })
 
         }
-    })
+    });
+    // 计时器
+    var timer = setInterval(showTime,1000);
+    function showTime(){
+        var end = Date.parse('2019/01/01');
+        var now = Date.now();
+        var offset = Math.floor((end - now)/1000);//毫秒
+     if(offset <= 0){
+            clearInterval(timer);
+       }
+    var sec = offset%60;
+    var min = Math.floor(offset/60)%60;
+    var hour = Math.floor(offset/60/60)%24;
+        sec = sec<10? '0'+sec : sec;
+        min = min<10? '0'+min : min;
+        hour = hour<10? '0'+hour : hour;
+    document.querySelector('.hour').innerHTML = hour;
+    document.querySelector('.min').innerHTML = min;
+    document.querySelector('.sec').innerHTML = sec;
+ }
+
+// 购物车
+// 将cookie中的值渲染到页面
+$.get("data/cart.json").done(function(data){
+    console.log(data)
+    var ul = document.querySelector(".cart_content1 ul");
+    var apro = getCookie("car").split("&");
+    for(var i = 0; i<apro.length; i++){
+        var pro = apro[i].split("|");
+        var info = find(data,pro[0]);
+        var lis = document.createElement("li");
+        lis.innerHTML += ' <div class="samll_img"><img src="'+info.pic+'" alt=""></div>'
+        lis.innerHTML += ' <p title="'+info.name+'">'+info.name+'</p>';
+        ul.appendChild(lis);
+        var div1 = document.createElement("div");
+        div1.className="samll_price";
+        div1.innerHTML += ' <span>￥'+info.price+'</span>';
+        lis.appendChild(div1);
+        var span = document.createElement("span");
+        span.innerHTML += ' <a href="javascript:;">-</a>';
+        span.innerHTML += '<div class="cart_input"><input type="text" value="'+pro[1]+'"></div>';
+        span.innerHTML += ' <a href="javascript:;">+</a>'
+        div1.appendChild(span);
+        div1.innerHTML += '<a href="javascript:;">删除</a>';
+
+    }
+    function find(arr,id){
+        for(var i = 0;i<arr.length; i++){
+            if(arr[i].skuId == id){
+                return arr[i];
+            }
+        }
+        return null;
+    };
+
+    function changeNum(id,num){
+        var carpros = getCookie("car").split("&");
+        for(var i = 0; i<carpros.length; i++){
+            var pro = carpros[i].split("|");
+            if(id == pro[0]){
+                pro[1] = parseInt(pro[1])+parseInt(num);
+                if(pro[1]<=0){
+                    carpros.splice(i,1);
+                }else{
+                    carpros.splice(i,1,pro.join("|"));
+                }
+            }
+        }
+        setCookie("car",carpros.join("&"),7);
+    
+    };
+})
+
+
+
+
+
+
+
 });
 
 
