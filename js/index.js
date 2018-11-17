@@ -126,7 +126,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
     // 楼层
     $('.left_floor ul li').click(function(){//点击按钮设置卷去高度
         var top = $('.floor_box').eq($(this).index()).offset().top;
-        console.log(top);
+        // console.log(top);
         $('body,html').stop().animate({
             scrollTop:top
         });
@@ -207,7 +207,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
         url:"data/index.json",
         dataType:"json",
         success:function(data){
-            console.log(data)
+            // console.log(data)
             data.forEach(function(ele,index){
                 var li = document.createElement("li");
                 li.innerHTML += '<dl><dt><img src="'+ele.src+'" alt=""></dt><dd>'+ele.name+'</dd><dd>￥'+ele.gomePrice+'</dd></dl>'
@@ -305,7 +305,6 @@ $.get("data/cart.json").done(function(data){
         span.innerHTML += ' <a href="javascript:;">+</a>'
         div1.appendChild(span);
         div1.innerHTML += '<a href="javascript:;">删除</a>';
-
     }
     function find(arr,id){
         for(var i = 0;i<arr.length; i++){

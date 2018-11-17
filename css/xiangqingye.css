@@ -1,3 +1,6 @@
+.shop_nav{
+    background: #ff0000;
+}
 .nav{
     height: 40px;
 }
@@ -13,6 +16,9 @@
     padding:  0 20px;
     cursor: pointer;
     line-height: 40px;
+}
+.nav ul li a{
+    color: #fff;
 }
 .content{
     background-color: #f6f6f6;
@@ -556,6 +562,9 @@
     top: 32px;
     left: -1px;
     display: none;
+}
+.jiaru>i div img{
+    margin-left: 4px;
 }
 .tishi{
     margin-bottom:35px;

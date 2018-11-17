@@ -115,6 +115,9 @@
     clear: both;
     visibility: hidden;
 }
+.cart_shop_title p{
+    visibility: hidden;
+}
 .cart_1{
     float: left;
     height: 38px;

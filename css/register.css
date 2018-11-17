@@ -76,6 +76,9 @@
     float: left;
     outline: none;
 }
+.tishi{
+    overflow: hidden;
+}
 .tishi1{
     background-color: #ffffff;
     padding: 9px 5px 9px 5px;
@@ -111,7 +114,24 @@
     margin-left:3px;
     display: none;
 }
+.tishi4{
+    background-color: #ffffff;
+    padding: 9px 5px 9px 5px;
+    line-height: 18px;
+    color: #FF5757;
+    float: left;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    margin-left:3px;
+    display: none;
+}
 .tishi2.active{
+    display: block;
+}
+.tishi3.active{
+    display: block;
+}
+.tishi4.active{
     display: block;
 }
 .password{

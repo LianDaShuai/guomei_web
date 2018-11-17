@@ -76,4 +76,26 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
     });
     // 载入尾部
     $(".foot").load("footer.html");
+
+    // 后台登陆
+    $(".submit").on("click",function(){
+        var name = $(".name").val();
+        var pass = $(".pass").val();
+        $.ajax({
+            type:"get",
+            url:"http://localhost/gome_web/gome/api/login.php",
+            data:{
+                uname:name,
+                password:pass
+            },
+            dataType:"json",
+            // async:true,
+            success:function(data){
+                if(data.errorCode == 0){
+                    alert("登陆成功")
+                }
+            }
+        })
+    })
+
 })

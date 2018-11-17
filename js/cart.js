@@ -167,30 +167,42 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
         var jia = $(".jia"),
         jian = $(".jian"),
         val = $(".cart_good5_ipt input")
+        // var apro = getCookie("car").split("&");
+        // var pro = [];
+        // for(var i = 0; i<apro.length; i++){
+        //     pro[i].index = apro[i].split("|");
+        // }
         jia.on("click",function(){
+            console.log($(this))
             var inputval = $(this).prev(".cart_good5_ipt").find("input"),
-                count = parseInt(inputval.val())+1,
+                count = parseFloat(inputval.val())+1,
                 Smallplan = $(this).parents(".cart_good1").find(".cart_good6 b"),// 小计
                 price = $(this).parents(".cart_good1").find(".cart_good4 em").html(),// 单价
-                Smallprice = count*parseInt(price.substring(1));
+                Smallprice = count*parseFloat(price.substring(1));
             inputval.val(count);
             Smallplan.html('￥'+Smallprice);
             totalMoney();
-            changeNum(pro[0],1)
+            changeNum(pro[0],1);
         });
         jian.on("click",function(){
             var inputval = $(this).next(".cart_good5_ipt").find("input"),
-                count = parseInt(inputval.val())-1,
+                count = parseFloat(inputval.val())-1,
                 Smallplan = $(this).parents(".cart_good1").find(".cart_good6 b"),// 小计
                 price = $(this).parents(".cart_good1").find(".cart_good4 em").html(),// 单价
-                Smallprice = count*parseInt(price.substring(1));
+                Smallprice = count*parseFloat(price.substring(1));
             if(inputval.val()>1){
                 inputval.val(count);
                 Smallplan.html('￥'+Smallprice);
                 totalMoney();
+                changeNum(pro[0],-1);
             }
-            changeNum(pro[0],-1)
         });
+
+        $(".cart_good7 a").on("click",function(){
+            $(this).parents(".cart_good1").css("display","none");
+            changeNum(pro[0],-9999);
+        })
+
     });
 
     function changeNum(id,num){
@@ -226,12 +238,12 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
 
     // 总价
     function totalMoney(){
-        var total_money = 0;
-        var total_count = 0;
+        var total_money = 0.00;
+        var total_count = 0.00;
         $(".danxuan").each(function(){
             if($(this).hasClass("active")){
-                var goods = parseInt($(this).parents(".cart_good1").find(".cart_good6 b").html().substring(1));
-                var num = parseInt($(this).parents(".cart_good1").find(".cart_good5_ipt input").val());
+                var goods = parseFloat($(this).parents(".cart_good1").find(".cart_good6 b").html().substring(1));
+                var num = parseFloat($(this).parents(".cart_good1").find(".cart_good5_ipt input").val());
                 total_money += goods;
                 total_count += num;
             }
