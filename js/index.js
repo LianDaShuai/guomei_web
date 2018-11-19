@@ -143,7 +143,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
     // 楼层导航栏出现
     $(window).scroll(function(){
         var scroll = $('html,body').scrollTop();
-        if(scroll>=$(".gm_finance").offset().top){
+        if(scroll>=$(".gm_jinrong").offset().top){
             $(".left_floor").addClass("active")
         }else{
             $(".left_floor").removeClass("active")
@@ -287,24 +287,26 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
 $.get("data/cart.json").done(function(data){
     console.log(data)
     var ul = document.querySelector(".cart_content1 ul");
-    var apro = getCookie("car").split("&");
-    for(var i = 0; i<apro.length; i++){
-        var pro = apro[i].split("|");
-        var info = find(data,pro[0]);
-        var lis = document.createElement("li");
-        lis.innerHTML += ' <div class="samll_img"><img src="'+info.pic+'" alt=""></div>'
-        lis.innerHTML += ' <p title="'+info.name+'">'+info.name+'</p>';
-        ul.appendChild(lis);
-        var div1 = document.createElement("div");
-        div1.className="samll_price";
-        div1.innerHTML += ' <span>￥'+info.price+'</span>';
-        lis.appendChild(div1);
-        var span = document.createElement("span");
-        span.innerHTML += ' <a href="javascript:;">-</a>';
-        span.innerHTML += '<div class="cart_input"><input type="text" value="'+pro[1]+'"></div>';
-        span.innerHTML += ' <a href="javascript:;">+</a>'
-        div1.appendChild(span);
-        div1.innerHTML += '<a href="javascript:;">删除</a>';
+    if(getCookie("car")){
+        var apro = getCookie("car").split("&");
+        for(var i = 0; i<apro.length; i++){
+            var pro = apro[i].split("|");
+            var info = find(data,pro[0]);
+            var lis = document.createElement("li");
+            lis.innerHTML += ' <div class="samll_img"><img src="'+info.pic+'" alt=""></div>'
+            lis.innerHTML += ' <p title="'+info.name+'">'+info.name+'</p>';
+            ul.appendChild(lis);
+            var div1 = document.createElement("div");
+            div1.className="samll_price";
+            div1.innerHTML += ' <span>￥'+info.price+'</span>';
+            lis.appendChild(div1);
+            var span = document.createElement("span");
+            span.innerHTML += ' <a href="javascript:;">-</a>';
+            span.innerHTML += '<div class="cart_input"><input type="text" value="'+pro[1]+'"></div>';
+            span.innerHTML += ' <a href="javascript:;">+</a>'
+            div1.appendChild(span);
+            div1.innerHTML += '<a href="javascript:;">删除</a>';
+        }
     }
     function find(arr,id){
         for(var i = 0;i<arr.length; i++){

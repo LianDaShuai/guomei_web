@@ -4,7 +4,6 @@ requirejs.config({
         jquery:"libs/jquery.min",
         Swiper:"plugins/swiper.min",
         lazy:"plugins/lazyload.min",
-        home:"modules/home",
         extend:"plugins/extend"
     },
     shim:{
@@ -23,7 +22,7 @@ requirejs.config({
 		}
 	}
 })
-requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
+requirejs(['jquery','Swiper','lazy',"extend"],function($,sw,lazy){
     $(".cart_tab").tab2("active");
     $("#all").click(function(){
         if($(this).hasClass("active")){
@@ -163,6 +162,17 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
             totalMoney();
 
         });
+        // 全选按钮
+        $(".all").on("click",function(){
+            if($(".all").hasClass("active")){
+                $(".all").removeClass("active")
+                $(".danxuan").removeClass("active")
+            }else{
+                $(".all").addClass("active")
+                $(".danxuan").addClass("active")
+            }
+            totalMoney();
+        });
         // 数量的增减
         var jia = $(".jia"),
         jian = $(".jian"),
@@ -223,17 +233,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
     };
 
 
-    // 全选按钮
-     $(".all").on("click",function(){
-         if($(".all").hasClass("active")){
-             $(".all").removeClass("active")
-             $(".danxuan").removeClass("active")
-         }else{
-             $(".all").addClass("active")
-             $(".danxuan").addClass("active")
-         }
-         totalMoney();
-     });
+    
 
 
     // 总价
@@ -252,4 +252,23 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
         $(".sum_price").html("￥"+total_money)
         $(".footer_yixuan span").html(total_count)
     }
+
+    // 移动效果
+    var myswiper = new sw('.phone1_list .phone1_c_center .swiper-container',{
+        autoplay:true,//自动轮播
+        autoplay: {
+            delay: 10000,//1秒切换一次
+        },
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable :true,
+        }
+    });
 });

@@ -121,6 +121,7 @@ requirejs(['jquery','Swiper','lazy','home',"extend"],function($,sw,lazy,h){
 
 
     // 加入购物车cookie
-    $(".go_shopping").append("<a>加入购物车</a>")
+    // $(".go_shopping").append("<a>加入购物车</a>")
     
+
 })
