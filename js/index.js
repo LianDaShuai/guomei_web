@@ -289,6 +289,7 @@ $.get("data/cart.json").done(function(data){
     var ul = document.querySelector(".cart_content1 ul");
     if(getCookie("car")){
         var apro = getCookie("car").split("&");
+        console.log(apro)
         for(var i = 0; i<apro.length; i++){
             var pro = apro[i].split("|");
             var info = find(data,pro[0]);

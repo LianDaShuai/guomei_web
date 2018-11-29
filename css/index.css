@@ -275,7 +275,15 @@
 /* 大轮播 */
 .banner{
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+.banner::after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+    visibility: hidden;
 }
 .slider{
     position: relative;
@@ -332,16 +340,23 @@
 }
 /* 左右侧图片 */
 .left_image,.right_image{
-    width: 300px;
+    /* width: 300px; */
+    width: 74px;
     height: 450px;
     position: absolute;
     top: 0;
 }
 .left_image{
-    left:-300px;
+    /* left:-300px; */
+    left: -74px;
+    background: #2cc7b0;
+    background: url(../img/left.png) no-repeat;
+    background-position: -226px 0;
 }
 .right_image{
     left: 1200px;
+    background: yellow;
+    background: url(../img/right.png) no-repeat;
 }
 /* 新闻快讯 */
 .news{
@@ -497,11 +512,20 @@
 .youhui{
     width: 100%;
     height: 272px;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+.youhui::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 .biqiang{
     margin-top:20px;
     position: relative;
+    overflow: hidden;
 }
 .biqiang .shop_left{
     height: 252px;
@@ -643,16 +667,23 @@
 }
 /* 美日必抢 */
 .biqiang_left,.biqiang_right{
-    width: 300px;
+    width: 74px;
     height: 272px;
     position: absolute;
     top: -20px;
 }
 .biqiang_left{
-    left: -300px;
+    /* left: -300px; */
+    left:-74px;
+    background: #2cc7b0;
+    background: url(../img/left1.png) no-repeat;
+    background-position: -226px 0;
 }
 .biqiang_right{
-    right: -300px;
+    /* right: -300px; */
+    right: -74px;
+    background: yellow;
+    background: url(../img/right1.png) no-repeat;
 }
 .image{
     width: 100%;
@@ -667,20 +698,25 @@
 }
 .remai-left,.remai-right{
     position: absolute;
-    width: 300px;
+    /* width: 300px; */
+    width: 74px;
     height: 710px;
 }
 .remai-left{
     top:0;
-    left:-300px;
+    /* left:-300px; */
+    left: -74px;
+    background: url(../img/remai-left.png) no-repeat -226px 0;
 }
 .remai-right{
     top: 0;
-    right: -300px;
+    /* right: -300px; */
+    right: -74px;
+    background: url(../img/remai-right.png) no-repeat;
 }
 .tao_shihui{
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .shihui1{
     width: 420px;
@@ -820,7 +856,7 @@
 /* 领劵中心 */
 .youhuijuan{
     margin-top: 20px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .youhuijuan .juan{
     float: left;
@@ -843,9 +879,9 @@
     float: left;
 }
 /* 金融 */
-.gm_jinrong{
+/* .gm_jinrong{
     overflow: hidden;
-}
+} */
 .gm_jinrong_title{
     width: 100%;
     height: 60px;
